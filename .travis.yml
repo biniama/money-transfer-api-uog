@@ -6,3 +6,11 @@ script:
 branches:
   only:
     - main
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: money-transfer-api-uog
+  on:
+    repo: biniama/money-transfer-api-uog
+    branch: main
+  skip_cleanup: 'true'
