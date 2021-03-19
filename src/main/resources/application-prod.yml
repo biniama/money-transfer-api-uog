@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-54-155-87-214.eu-west-1.compute.amazonaws.com:5432/deeg0dr7tftg2o
+    username: jaxkdyanofqgmr
+    password: 0d31360601b3efe5f5245c21aedd126f024c2b1720ddc2ce520a1a5f326bd804
+    # In Spring boot 2, database initialization only works for embedded databases (H2, HSQLDB).
+    # If you want to use it for other databases, you need to change the
+    initialization-mode: always
+  jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect
+  # The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+  jpa.show-sql: true
+  jpa.hibernate.ddl-auto: update
